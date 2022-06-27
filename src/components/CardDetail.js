@@ -131,9 +131,9 @@ const CardDetail = () => {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 ></path>
               </svg>
               New Post
@@ -142,7 +142,7 @@ const CardDetail = () => {
           <div className=" sm:items-start sm:pt-5 ">
             <div className="mt-1 sm:mt-0 sm:col-span-2 ">
               <label
-                for="about"
+                htmlFor="about"
                 className="block text-sm text-left font-medium text-gray-700 sm:mt-px sm:pt-2"
               >
                 {" "}
@@ -161,7 +161,7 @@ const CardDetail = () => {
             <div className=" sm:items-start  sm:pt-5">
               <div className="mt-1 sm:mt-0 sm:col-span-2">
                 <label
-                  for="about"
+                  htmlFor="about"
                   className="block text-sm text-left font-medium text-gray-700 sm:mt-px sm:pt-2"
                 >
                   {" "}
@@ -223,8 +223,8 @@ const CardDetail = () => {
       <ToastContainer />
       <div className="mt-10">
         <h1 className="text-3xl text-left underline font-semibold">Comments</h1>
-        {comments.map((comment) => (
-          <Comment comment={comment} />
+        {comments.map((comment, index) => (
+          <Comment key={index} comment={comment} />
         ))}
       </div>
     </div>
